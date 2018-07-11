@@ -1,3 +1,31 @@
 page-home {
-
+    ion-content{  
+    background-image:  url(../../assets/imgs/Niagara.Falls.original.2898.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    
+    
+    
+    
+     
+    }
+    .toolbar-background{
+        text-align: center;
+        color:red;
+        background-color: brown;
+        
+    }
+    .button{
+        color:red;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        background-color: brown;
+                }
 }

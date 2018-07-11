@@ -1,8 +1,9 @@
+import { PEOPLE } from './../../mocks/task.mocks';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the HomePage page.
+ * Generated class for the SecondPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,20 +11,22 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-home',
-  templateUrl: 'home.html',
+  selector: 'page-second',
+  templateUrl: 'second.html',
 })
-export class HomePage {
-  
-  name:string="hello world";
+export class SecondPage {
+  name:string;
+  peoplelist = PEOPLE;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.name =this.navParams.get("variable"); 
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad HomePage');
+    console.log('ionViewDidLoad SecondPage');
   }
-  navigator(){
-    this.navCtrl.push("SecondPage",{variable:this.name});
+
+  onClick(){
+    this.navCtrl.push("AddtaskPage");
 
   }
 }
